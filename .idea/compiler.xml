@@ -9,5 +9,8 @@
         <module name="TestGenerator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TestGenerator" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
