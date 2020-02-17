@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TestGeneratorController">
+  <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane>
+               <children>
+                  <VBox minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" prefWidth="-1.0">
+                           <children>
+                              <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="70.0" text="Test Name:" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" fx:id="x2" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" prefWidth="400.0" promptText="Test_Name" HBox.margin="$x1" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="-1.0" prefWidth="-1.0">
+                           <children>
+                              <Label font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="50.0" text="Source:" HBox.margin="$x1" />
+                              <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="250.0" promptText="Source connect" HBox.hgrow="ALWAYS" HBox.margin="$x1">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Item 1" />
+                                       <String fx:value="Item 2" />
+                                       <String fx:value="Item 3" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                              <Label font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="50.0" text="Target:" HBox.margin="$x1" />
+                              <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="250.0" promptText="Target connect" HBox.margin="$x1">
+                                 <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Item 1" />
+                                       <String fx:value="Item 2" />
+                                       <String fx:value="Item 3" />
+                                    </FXCollections>
+                                 </items>
+                              </ComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="-1.0" prefWidth="-1.0">
+                           <children>
+                              <Hyperlink text="Set globall connection config">
+                                 <textFill>
+                                    <Color blue="1.000" green="0.160" red="0.000" fx:id="x3" />
+                                 </textFill>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                              <Hyperlink text="Add new credentials" textFill="$x3">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Hyperlink>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="200.0" VBox.margin="$x4" VBox.vgrow="NEVER">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="120.0" text="Source Schemas:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x1" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextArea prefWidth="200.0" promptText="Schemas.Source_Schema_Name" wrapText="true" VBox.margin="$x1" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" HBox.margin="$x4">
+                                 <children>
+                                    <Label font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="120.0" text="Target Schemas:" VBox.margin="$x1" />
+                                    <TextArea prefHeight="600.0" prefWidth="200.0" promptText="Schemas.Target_Schema_Name" text="" wrapText="true" VBox.margin="$x1" />
+                                 </children>
+                                 <padding>
+                                    <Insets fx:id="x4" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Label font="$x2" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="85.0" text="Test-list files:" VBox.margin="$x1" />
+                              <HBox maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.margin="$x4" VBox.vgrow="NEVER">
+                                 <children>
+                                    <TableView maxHeight="-Infinity" minHeight="-1.0" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" HBox.margin="$x1">
+                                       <columns>
+                                          <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="537.0" text="Test-list path" />
+                                          <TableColumn maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Target schema" />
+                                       </columns>
+                                    </TableView>
+                                    <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="-1.0" prefWidth="48.0" HBox.hgrow="NEVER" HBox.margin="$x4">
+                                       <children>
+                                          <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" text="+" VBox.margin="$x1">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" text="-" VBox.margin="$x1">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox>
+                           <children>
+                              <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="16.0" prefWidth="83.0" text="Project path:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField maxHeight="-Infinity" minHeight="-Infinity" prefHeight="25.0" promptText="Project path" text="/run/TargetPro/CLITesys/testDBs/" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button mnemonicParsing="false" text="Browese" HBox.hgrow="NEVER">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="-1.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox HBox.hgrow="NEVER">
+                                 <children>
+                                    <Label prefHeight="18.0" text="Test types: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Apply test" VBox.vgrow="NEVER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Conversion test">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Error test">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Action items test">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" selected="true" text="Tree validator test">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Conversion reference file:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <TextField promptText="Conversion reference file" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" text="Browese" HBox.hgrow="NEVER">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="-1.0" right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Action items reference file:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <TextField promptText="Action items reference file" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" text="Browese" HBox.hgrow="NEVER">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="-1.0" right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label text="Tree validator reference file:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox>
+                                       <children>
+                                          <TextField promptText="Tree validator reference file" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <Button mnemonicParsing="false" text="Browese" HBox.hgrow="NEVER">
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="-1.0" right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="120.0" text="Object Definitions:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" fx:id="x11" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextArea prefWidth="200.0" promptText="Object Definitions" wrapText="true" VBox.margin="$x11" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" HBox.margin="$x41">
+                                 <children>
+                                    <Label font="$x2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="18.0" prefWidth="125.0" text="Attribute Allow List:" VBox.margin="$x11" />
+                                    <TextArea prefHeight="600.0" prefWidth="200.0" promptText="Attribute Allow List" text="" wrapText="true" VBox.margin="$x11" />
+                                 </children>
+                                 <padding>
+                                    <Insets fx:id="x41" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <Button mnemonicParsing="false" text="Generate Object Definitions/Attribte List">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT">
+                           <children>
+                              <Button mnemonicParsing="false" text="Create tests">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Cancel">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+  </children>
+</AnchorPane>
