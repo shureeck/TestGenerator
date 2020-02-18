@@ -11,4 +11,9 @@ public class NodeNames {
     public static final String SOURCE_VENDOR_NODE ="sourceVendor";
     public static final String TARGET_VENDOR_NODE ="targetVendor";
     public static final String USE_GLUE_NODE ="useGlue";
+
+    public static final String SOURCE_NODE ="source";
+    public static final String TARGET_DEV_NODE ="DEV";
+
 }
+

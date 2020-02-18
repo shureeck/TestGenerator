@@ -19,6 +19,7 @@ public class ConnectionEntity {
     private String password;
     private boolean isGlue = false;
     private Node connection;
+    private String parentNode;
 
     public ConnectionEntity() {
     }
@@ -53,6 +54,7 @@ public class ConnectionEntity {
 
     public void setConnection(Node connection) {
         this.connection = connection;
+        this.parentNode = connection.getParentNode().getNodeName();
         this.alias = ((Element) connection).getAttribute(VALUE);
         NodeList childList = connection.getChildNodes();
         for (int i = 0; i < childList.getLength(); i++) {
@@ -87,6 +89,15 @@ public class ConnectionEntity {
 
     public void setGlue(boolean glue) {
         isGlue = glue;
+    }
+
+    public String toString() {
+        String result = this.vendor + ":" + server;
+        if (this.port != null && !this.port.isEmpty())
+            result = result + ":" + this.port;
+        if (this.sid != null && !this.sid.isEmpty())
+            result = result + "/" + this.sid;
+        return result;
     }
 
 }
